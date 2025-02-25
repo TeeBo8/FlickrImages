@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explorez et découvrez des images de Flickr avec notre application de recherche moderne">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.flickr.com/favicon.ico" type="image/x-icon">
+    <title>flickrImages | Explorez des millions de photos</title>
+</head>
+<body>
+    <!-- Header  -->
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-camera"></i> flickrImages</h1>
+            <div class="theme-toggle" aria-label="Changer de thème">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Barre de recherche  -->
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Rechercher des images..." aria-label="Rechercher des images">
+                <button id="searchButton" aria-label="Lancer la recherche">
+                    <span>Rechercher</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages et chargement -->
+        <div id="errorMessage" class="error-message" role="alert"></div>
+        <div id="loading" class="loading" aria-hidden="true">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Galerie  -->
+        <div id="gallery" class="gallery-grid" role="region" aria-label="Résultats de recherche"></div>
+        
+        <!-- Message initial -->
+        <div id="initialMessage" class="initial-message">
+            <i class="fas fa-images"></i>
+            <h2>Recherchez des images sur Flickr</h2>
+            <p>Entrez un terme de recherche pour découvrir des millions de photos</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 flickrImages - Propulsé par l'API Flickr</p>
+        <div class="footer-links">
+            <a href="#" aria-label="À propos">À propos</a>
+            <a href="#" aria-label="Confidentialité">Confidentialité</a>
+            <a href="#" aria-label="Conditions d'utilisation">Conditions</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
