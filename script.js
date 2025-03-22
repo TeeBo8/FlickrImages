@@ -1,4 +1,20 @@
-const apiKey = '264039c17675233df3210744bd070532';
+// Vérifiez si le fichier config.js existe et contient une clé API
+// Si vous clonez ce projet, vous devez créer votre propre fichier config.js
+// basé sur config.example.js avec votre propre clé API Flickr
+let apiKey = 'VOTRE_CLE_API_FLICKR'; // Valeur par défaut (ne fonctionnera pas)
+
+// Cette partie sera remplacée par la vraie clé si config.js est présent
+// Le fichier config.js n'est pas inclus dans le dépôt GitHub pour des raisons de sécurité
+try {
+    // Essayer de charger la configuration depuis config.js (fichier ignoré par git)
+    if (typeof configApiKey !== 'undefined') {
+        apiKey = configApiKey;
+    }
+} catch (error) {
+    console.error('⚠️ Le fichier config.js avec votre clé API est manquant.');
+    console.error('Veuillez créer un fichier config.js basé sur config.example.js avec votre propre clé API Flickr.');
+}
+
 let currentPage = 1;
 let currentSearch = '';
 let isLoading = false;
